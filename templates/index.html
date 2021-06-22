@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'index.css' %}" />
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+<style>
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: #FFF;
+  }
+  
+  .text-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 4vw;
+    font-weight: 30;
+   
+    color: orange;
+    display: block;
+    padding: .5em;
+  }
+  
+  h1:nth-child(2) {
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    clip-path: inset(-1% -1% 50% -1%); 
+  }
+  
+  p {
+    font-size: 2vw;
+    font-weight: 900;
+    margin-top: 1em;
+    text-align: center;
+
+  }
+  
+
+  .container {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+ 
+  
+</style>
+</head>
+<body>
+  <div class="container">
+    <!-- code here -->
+    <div class="text-box">
+      <h1>VOICYCALC</h1>
+      <h1>VOICYCALC</h1>
+    </div>
+
+  </div>
+  
+<div class="main">
+  <input type="text" class="calculator-screen" value="" disabled />
+  
+  <div class="calculator-keys">
+    
+    <button type="button" class="operator" value="+">+</button>
+    <button type="button" class="operator" value="-">-</button>
+    <button type="button" class="operator" value="*">&times;</button>
+    <button type="button" class="operator" value="/">&divide;</button>
+
+    <button type="button" value="7"><b>7</b></button>
+    <button type="button" value="8"><b>8</b></button>
+    <button type="button" value="9"><b>9</b></button>
+
+
+    <button type="button" value="4"><b>4</b></button>
+    <button type="button" value="5"><b>5</b></button>
+    <button type="button" value="6"><b>6</b></button>
+
+
+    <button type="button" value="1"><b>1</b></button>
+    <button type="button" value="2"><b>2</b></button>
+    <button type="button" value="3"><b>3</b></button>
+
+
+    <button type="button" value="0"><b>0</b></button>
+    <button type="button" class="decimal" value="."><b>.</b></button>
+    <button type="button" class="all-clear" value="all-clear">DEL</button>
+
+
+    <button type="button" class="equal-sign operator" value="=">=</button>
+
+  </div>
+</div>
+<div style="text-align:center">
+  <a href="{% url 'voice_calculator' %}"><button class="button2"><i class="fas fa-microphone"></i>VOICE CALC</button></a>
+</div>
+<script src="{% static 'index.js' %}"></script>
+</body>
+</html>

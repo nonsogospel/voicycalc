@@ -1,0 +1,107 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.main {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+.calculator-screen {
+  font-family:Verdana;
+  width: 100%;
+  font-size: 5rem;
+  height: 80px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+button {
+  font-family:Segoe UI;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid white;
+  background-color: transparent;
+  font-size: 2rem;
+  color: black;
+  background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,.04));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
+  text-shadow: 0 1px rgba(255,255,255,.4);
+}
+
+button:hover {
+  background-color: #eaeaea;
+}
+
+.operator {
+  color: #337cac;
+}
+
+.all-clear {
+  font-family:Georgia;
+  background-color: red;
+  border-color: red;
+  color: #fff;
+}
+
+.all-clear:hover {
+  background-color: #f17377;
+}
+
+.equal-sign {
+  background-color: green;
+  border-color: green;
+  color: #fff;
+  height: 100%;
+  grid-area: 2 / 4 / 6 / 5;
+}
+
+.equal-sign:hover {
+  background-color: #91fca8;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+/* Button for the Voice Calculator */
+.button2 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  position: absolute;
+  top: 590px;
+  right:601px;
+}
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}

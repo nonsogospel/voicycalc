@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOICY CALCULATOR - Say it We Calculate</title>
+
+<style>
+body {
+    background-color:grey;  
+  
+}  
+.button3 {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    position: absolute;
+    top: 200px;
+    right:601px;
+}
+
+.button3:hover {background-color: #3e8e41}
+
+.button3:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* Button 4 */
+.button4 {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    position: absolute;
+    top: 350px;
+    right:601px;
+}
+
+.button4:hover {background-color: #3e8e41}
+
+.button4:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.littletext {
+    position: absolute;
+    top: 430px;
+    right:560px;
+    color:white;
+    
+}
+
+
+</style>
+</head>
+<body>
+  <form method="POST" action="run_script" method="POST">
+      {% csrf_token %}
+      <button class="button3">START</button><br /><br />
+  </form>
+
+  <form method="POST" action="help_script" method="POST">
+    {% csrf_token %}
+    <button class="button4">HELP</button>
+
+</form>
+<div class="littletext">
+    <p>- 3 plus 3 -</p>
+    <p>- 3 minus 3 -</p>
+    <p>-3 multiply 3   -</p>
+    <p>- 3 divide by 3 -</p>
+    <p>- 3 square 3 -</p>
+    <p>- 9 r-</p>
+    <p>-3 cube of 3-</p>
+    <p>-3 is to the power 3-</p>
+    <p>-3 cube root 3-</p>
+    <p>-3 factorial 3-</p>
+</div>
+</body>
+</html>
